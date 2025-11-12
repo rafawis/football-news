@@ -1,5 +1,5 @@
 from django.urls import path
-from main.views import register,login_user, logout_user, show_main, create_news, edit_news,delete_news,show_news, show_xml, show_json, show_xml_by_id, show_json_by_id, add_news_entry_ajax
+from main.views import register,login_user, logout_user, show_main, create_news, edit_news,delete_news,show_news, show_xml, show_json, show_xml_by_id, show_json_by_id, add_news_entry_ajax, proxy_image, create_news_flutter
 
 app_name = 'main'
 
@@ -17,4 +17,8 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
     path('create-news-ajax', add_news_entry_ajax, name='add_news_entry_ajax'),
+    path('proxy-image/', proxy_image, name='proxy_image'),
+    path('create-flutter/', create_news_flutter, name='create_news_flutter'),
+
+
 ]
